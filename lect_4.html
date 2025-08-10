@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شرح خصائص CSS الأساسية</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>شرح خصائص CSS الأساسية</h1>
+        <p>دليل عملي لتنسيق صفحات الويب</p>
+    </header>
+
+    <!-- الخلفية -->
+    <section id="background">
+        <h2>1. الخلفية (background-color & background-image)</h2>
+        <p>تُستخدم هذه الخصائص لتحديد لون أو صورة خلفية للعناصر.</p>
+
+        <table>
+            <tr>
+                <th>الخاصية</th>
+                <th>الوصف</th>
+                <th>القيم الممكنة</th>
+            </tr>
+            <tr>
+                <td>background-color</td>
+                <td>تحديد لون الخلفية</td>
+                <td>اسم اللون، HEX، RGB</td>
+            </tr>
+            <tr>
+                <td>background-image</td>
+                <td>إضافة صورة كخلفية</td>
+                <td>url('path')</td>
+            </tr>
+        </table>
+
+        <div class="code-box">
+<pre><code>
+div {
+    background-color: lightblue;
+    background-image: url('pattern.png');
+    background-size: cover;
+}
+</code></pre>
+        </div>
+
+        <div class="result-box background-example">
+            هذا نص بخلفية ملونة + صورة.
+        </div>
+    </section>
+
+    <!-- النصوص -->
+    <section id="text">
+        <h2>2. النصوص (Text)</h2>
+        <p>خصائص النصوص تتحكم بمحاذاة النص، تزيينه، وتحويله.</p>
+        <table>
+            <tr>
+                <th>الخاصية</th>
+                <th>الوصف</th>
+                <th>القيم</th>
+            </tr>
+            <tr>
+                <td>text-align</td>
+                <td>محاذاة النص</td>
+                <td>left, right, center, justify</td>
+            </tr>
+            <tr>
+                <td>text-decoration</td>
+                <td>تزيين النص</td>
+                <td>none, underline, overline, line-through</td>
+            </tr>
+            <tr>
+                <td>text-transform</td>
+                <td>تحويل حالة الحروف</td>
+                <td>uppercase, lowercase, capitalize</td>
+            </tr>
+        </table>
+
+<pre><code>
+p {
+    text-align: center;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+</code></pre>
+
+        <div class="result-box text-example">
+            هذا نص مُحاذى للوسط ومسطّر
+        </div>
+    </section>
+
+    <!-- الخطوط -->
+    <section id="font">
+        <h2>3. الخطوط (Font)</h2>
+        <p>خصائص الخطوط تحدد نوع الخط، حجمه، ووزنه.</p>
+        <table>
+            <tr>
+                <th>الخاصية</th>
+                <th>الوصف</th>
+                <th>القيم</th>
+            </tr>
+            <tr>
+                <td>font-family</td>
+                <td>عائلة الخط</td>
+                <td>Arial, Tahoma, sans-serif...</td>
+            </tr>
+            <tr>
+                <td>font-size</td>
+                <td>حجم الخط</td>
+                <td>px, em, rem, %</td>
+            </tr>
+            <tr>
+                <td>font-weight</td>
+                <td>وزن الخط</td>
+                <td>normal, bold, 100-900</td>
+            </tr>
+        </table>
+
+<pre><code>
+h1 {
+    font-family: 'Tahoma', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+}
+</code></pre>
+
+        <div class="result-box font-example">
+            هذا نص بخط Tahoma وحجم 24px
+        </div>
+    </section>
+
+    <!-- اللون -->
+    <section id="color">
+        <h2>4. اللون (Color)</h2>
+        <p>خاصية color تحدد لون النص.</p>
+
+<pre><code>
+p {
+    color: red;
+}
+</code></pre>
+
+        <div class="result-box color-example">
+            هذا نص لونه أحمر
+        </div>
+    </section>
+
+    <!-- الحدود -->
+    <section id="border">
+        <h2>5. الحدود (Border)</h2>
+        <p>تضيف إطاراً حول العنصر.</p>
+        <table>
+            <tr>
+                <th>الخاصية</th>
+                <th>الوصف</th>
+                <th>القيم</th>
+            </tr>
+            <tr>
+                <td>border-width</td>
+                <td>سمك الحدود</td>
+                <td>px</td>
+            </tr>
+            <tr>
+                <td>border-style</td>
+                <td>نمط الحدود</td>
+                <td>solid, dashed, dotted...</td>
+            </tr>
+            <tr>
+                <td>border-color</td>
+                <td>لون الحدود</td>
+                <td>اسم لون، HEX، RGB</td>
+            </tr>
+        </table>
+
+<pre><code>
+div {
+    border: 2px solid black;
+}
+</code></pre>
+
+        <div class="result-box border-example">
+            عنصر بحد أزرق متقطع
+        </div>
+    </section>
+
+    <!-- الحشو الداخلي -->
+    <section id="padding">
+        <h2>6. الحشو الداخلي (Padding)</h2>
+        <p>المسافة بين محتوى العنصر وحدوده الداخلية.</p>
+
+<pre><code>
+div {
+    padding: 20px;
+}
+</code></pre>
+
+        <div class="result-box padding-example">
+            نص مع مسافة داخلية (Padding) 20px
+        </div>
+    </section>
+
+    <!-- الهوامش الخارجية -->
+    <section id="margin">
+        <h2>7. الهوامش الخارجية (Margin)</h2>
+        <p>المسافة بين العنصر والعناصر المجاورة.</p>
+
+<pre><code>
+div {
+    margin: 30px;
+}
+</code></pre>
+
+        <div class="result-box margin-example">
+            عنصر مع هامش خارجي 30px
+        </div>
+    </section>
+
+</body>
+</html>
